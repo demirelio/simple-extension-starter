@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "nocean",
+  "version": "0.0.1",
+  "action": { "default_popup": "popup.html" },
+  "content_scripts": [
+    {
+      "js": ["src/content-entry.jsx"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": ["tabs", "bookmarks"],
+  "optional_permissions": ["unlimitedStorage"],
+  "host_permissions": ["<all_urls>"],
+  "optional_host_permissions": ["*://*/*"]
+}
